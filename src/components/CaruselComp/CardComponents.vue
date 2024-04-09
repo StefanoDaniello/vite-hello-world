@@ -1,17 +1,17 @@
 <template>
     <div>
-        <h2>{{ sttitles }}</h2>
-        <img :src="img" alt="immagine">
+        <h2>Nome: {{ sttitles }}</h2>
+        <img :src="img + (numero + 1) + '.jpg'" alt="immagine">
     </div>
 </template>
 
 <script>
     export default {
         name: 'CardComponents',
-        props: ['sttitles'],
+        props: ['sttitles', 'numero'],
         data() {
           return {
-            img: '/img/avatar_2.jpg'
+            img: '/img/avatar_'
           }
         },
     }

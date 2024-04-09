@@ -1,7 +1,7 @@
 <template>
    <main>
         <div v-for="(items , index) in titles " :key="items">
-            <CardComponents :sttitles="items"/>
+            <CardComponents :sttitles="items" :numero="index"/>
         </div>
    </main>
 </template>
