@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div @click="change">
         <h2>Nome: {{ sttitles }}</h2>
-        <img :src="img + (numero + 1) + '.jpg'" alt="immagine">
+        <img :src="img" alt="immagine">
     </div>
 </template>
 
@@ -11,9 +11,14 @@
         props: ['sttitles', 'numero'],
         data() {
           return {
-            img: '/img/avatar_'
+            img: '/img/avatar_' + (this.numero + 1) + '.jpg'
           }
         },
+        methods: {
+          change () {
+            this.img = '/img/avatar_io.jpg'
+        }
+      }
     }
 </script>
 
