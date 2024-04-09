@@ -1,12 +1,13 @@
 <template>
    <main>
-        <img src="/img/avatar_2.jpg" alt="immagine">
-        <CardComponents/>
+        <div v-for="(items , index) in titles " :key="items">
+            <CardComponents :sttitles="items"/>
+        </div>
    </main>
 </template>
 
 <script>
-    import CardComponents from './CaruselComp.vue/CardComponents.vue'
+    import CardComponents from './CaruselComp/CardComponents.vue'
     export default {
         name: 'MainComponents',
         components: {
@@ -14,6 +15,13 @@
         },
         data() {
           return {
+            titles:[
+                'Stefano',
+                'Lorenzo',
+                'Michele',
+                'Gennaro',
+                'Davide'
+            ]
           }
         },
     }
